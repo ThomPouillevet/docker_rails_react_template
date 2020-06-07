@@ -53,3 +53,13 @@ Install Rspec and run a first test with
 docker-compose exec web bin/rails generate rspec:install
 docker-compose exec web bin/rails spec
 ```
+
+When needed, close the app with
+```
+docker-compose down
+```
+
+You can relaunch it with
+```
+docker-compose up -d
+```
