@@ -1,8 +1,8 @@
 # README
 
---
+---
 > WARNING: this README does not contain instructions for production and deployment.
---
+---
 
 I created this template while learning how to create a Rails app with Docker. It runs with:
 * Ruby version : 2.6.6
@@ -35,7 +35,7 @@ DATABASE_HOST=database
 
 Then, build the docker image with
 ```
-ENTRYPOINT ["./docker-entrypoint.sh"]
+docker build -t railsapp .
 ```
 
 Launch the app with
