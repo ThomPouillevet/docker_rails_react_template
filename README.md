@@ -48,9 +48,8 @@ Create and migrate your DB with
 docker-compose exec web bin/rails db:create db:migrate
 ```
 
-Install Rspec and run a first test with
+Run tests with
 ```
-docker-compose exec web bin/rails generate rspec:install
 docker-compose exec web bin/rails spec
 ```
 
