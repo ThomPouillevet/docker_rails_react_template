@@ -1,24 +1,55 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+--
+> WARNING: this README does not contain instructions for production and deployment.
+--
 
-Things you may want to cover:
+I created this template while learning how to create a Rails app with Docker. It runs with:
+* Ruby version : 2.6.6
+* Rails version : 5.2.4
+* A Postgres DB
+* React (if needed on some views)
+* Rspec & Capybara instead of default test suite
 
-* Ruby version
+Things you may want to add:
+* Devise
+* Stimulus
 
-* System dependencies
+# Deployment instructions
 
-* Configuration
+Clone the project
 
-* Database creation
+At the root add `.env/development` directory and create two files inside :
 
-* Database initialization
+In a file named `database`add
+```
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=some-long-secure-password
+POSTGRES_DB=myapp_development
+```
 
-* How to run the test suite
+In a file named `web`add
+```
+DATABASE_HOST=database
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Then, build the docker image with
+```
+ENTRYPOINT ["./docker-entrypoint.sh"]
+```
 
-* Deployment instructions
+Launch the app with
+```
+docker-compose up -d
+```
 
-* ...
+Create and migrate your DB with
+```
+docker-compose exec web bin/rails db:create db:migrate
+```
+
+Install Rspec and run a first test with
+```
+docker-compose exec web bin/rails generate rspec:install
+docker-compose exec web bin/rails spec
+```
