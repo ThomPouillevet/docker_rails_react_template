@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Logs
+log/*
+
+# Temp files
+tmp/*
+
+# Ignore test files:
+.rspec
+spec/
+
+# Ignore bash / IRB / Byebug history files
+.bash_history
+.byebug_hist
+.byebug_history
+.pry_history
+
+# Editor temp files
+*.swp
+*.swo
