@@ -33,7 +33,7 @@ In a file named `web`add
 DATABASE_HOST=database
 ```
 
-Then, build the docker image with
+Then, build the docker image (-t railsapp is used to give your image a tag name. Change it as you like) with
 ```
 docker build -t railsapp .
 ```
