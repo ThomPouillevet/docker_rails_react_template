@@ -1,7 +1,7 @@
 # README
 
 ---
-> WARNING: this README does not contain instructions for production and deployment.
+> WARNING: Template still in progress. This README does not contain instructions for production and deployment.
 ---
 
 I created this template while learning how to create a Rails app with Docker. It runs with:
